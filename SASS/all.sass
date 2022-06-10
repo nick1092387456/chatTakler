@@ -58,6 +58,7 @@ table
 //base
 $orange: #FF5D50
 $blue: #56C4C5
+$deep-gray: #747474
 @mixin center
 	display: flex
 	justify-content: center
@@ -105,6 +106,22 @@ $blue: #56C4C5
 			font-size: 32px
 			line-height: 46px
 
+.title-m>p
+	font-size: 32px
+	line-height: 46px
+@media(max-width:568px)
+	.title-m>p
+		font-size: 28px
+		line-height: 40px
+
+.title-s>p
+	font-size: 24px
+	line-height: 35px
+@media(max-width:568px)
+	.title-s>p
+		font-size: 18px
+		line-height: 26px
+
 .sub-title
 	p
 		font-size: 20px
@@ -119,9 +136,9 @@ $blue: #56C4C5
 .main
 	max-width: 1366px
 	margin: 0 auto
-	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg")
-	background-position: top right
-	background-size: 850px 768px
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg")
+	background-position: top right, top 490px left -220px
+	background-size: 850px 768px, 360px
 	background-repeat: no-repeat
 @media(max-width:568px)
 	.main
@@ -189,3 +206,47 @@ $blue: #56C4C5
 			width: 100%
 		.banner-img
 			width: 100%
+
+.platform
+	@include center
+	margin-top: 101px
+	flex-direction: column
+	background-image: none
+	.platform-card-wrap
+		margin-top: 48px
+		@include center
+		flex-direction: row
+		gap: 126px
+	.platform-card-img>img
+		width: 90px
+	.platform-card
+		@include center
+		flex-direction: column
+		gap: 24px
+	.platform-card-content
+		text-align: center
+		color: $deep-gray
+@media(max-width:568px)	
+	.platform
+		@include center
+		margin-top: 98.5px
+		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg")
+		background-position: top 15px left -77px
+		background-size: 126px
+		background-repeat: no-repeat
+		.platform-card-wrap
+			margin-top: 32px
+			@include center
+			flex-direction: column
+			gap: 24px
+		.platform-card-img>img
+			width: 60px
+		.platform-card
+			@include center
+			flex-direction: column
+			gap: 16px
+		.platform-card-content
+			text-align: center
+			color: $deep-gray
+
+		

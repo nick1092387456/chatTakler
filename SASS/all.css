@@ -117,6 +117,28 @@ table {
     line-height: 46px;
   }
 }
+.title-m > p {
+  font-size: 32px;
+  line-height: 46px;
+}
+
+@media (max-width: 568px) {
+  .title-m > p {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+.title-s > p {
+  font-size: 24px;
+  line-height: 35px;
+}
+
+@media (max-width: 568px) {
+  .title-s > p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 .sub-title p {
   font-size: 20px;
   line-height: 29px;
@@ -131,9 +153,9 @@ table {
 .main {
   max-width: 1366px;
   margin: 0 auto;
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg");
-  background-position: top right;
-  background-size: 850px 768px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg");
+  background-position: top right, top 490px left -220px;
+  background-size: 850px 768px, 360px;
   background-repeat: no-repeat;
 }
 
@@ -224,5 +246,70 @@ table {
   }
   .banner .banner-img {
     width: 100%;
+  }
+}
+.platform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 101px;
+  flex-direction: column;
+  background-image: none;
+}
+.platform .platform-card-wrap {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 126px;
+}
+.platform .platform-card-img > img {
+  width: 90px;
+}
+.platform .platform-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.platform .platform-card-content {
+  text-align: center;
+  color: #747474;
+}
+
+@media (max-width: 568px) {
+  .platform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 98.5px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg");
+    background-position: top 15px left -77px;
+    background-size: 126px;
+    background-repeat: no-repeat;
+  }
+  .platform .platform-card-wrap {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .platform .platform-card-img > img {
+    width: 60px;
+  }
+  .platform .platform-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .platform .platform-card-content {
+    text-align: center;
+    color: #747474;
   }
 }/*# sourceMappingURL=all.css.map */
