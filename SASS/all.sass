@@ -1,3 +1,191 @@
-h1
-  color: red
-  
+// css reset
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 16px
+	line-height: 24px
+	font: inherit
+	vertical-align: baseline
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+	display: block
+
+p
+	line-height: 24px
+	font-size: 16px
+	font-family: "Noto Sans TC", sans-serif
+
+ol, ul
+	list-style: none
+
+a
+	text-decoration: none
+	display: block
+	color: inherit
+	&:visited
+		color: inherit
+
+div
+	box-sizing: border-box
+
+blockquote, q
+	quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+//base
+$orange: #FF5D50
+$blue: #56C4C5
+@mixin center
+	display: flex
+	justify-content: center
+	align-items: center
+
+.card
+	padding: 0 139px
+@media(max-width:568px)
+	.card
+		padding: 0 20px
+
+.button
+	border-radius: 22px
+	a
+		width: 128px
+		height: 40px
+		@include center
+		color: white
+
+.button-orange
+	background-color: $orange
+
+.title-blue
+	color: $blue
+
+.title-bold
+	font-weight: bold
+
+.title
+	p
+		font-size: 18px
+		line-height: 26px
+@media(max-width:568px)
+	.title
+		p
+			font-size: 16px
+
+.title-l
+	p
+		font-size: 48px
+		line-height: 70px
+@media(max-width:568px)
+	.title-l
+		p
+			font-size: 32px
+			line-height: 46px
+
+.sub-title
+	p
+		font-size: 20px
+		line-height: 29px
+@media(max-width:568px)
+	.sub-title
+		p
+			font-size: 16px
+			line-height: 24px
+
+//myStyle
+.main
+	max-width: 1366px
+	margin: 0 auto
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg")
+	background-position: top right
+	background-size: 850px 768px
+	background-repeat: no-repeat
+@media(max-width:568px)
+	.main
+		max-width: 375px
+		margin: 0 auto
+		background-image: none
+
+.header
+	width: 100%
+	padding-top: 24px
+	padding-bottom: 24px
+	border-bottom: none
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	.logo
+		line-height: 40px
+		@include center
+		img
+			height: 40px
+		h1
+			display: none
+@media(max-width:568px)
+	.header
+		width: 100%
+		padding: 16px 20px
+		border-bottom: 2px solid #FFD153
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		.logo
+			line-height: 40px
+			@include center
+			img
+				height: 24px
+
+.banner
+	margin-top: 32px
+	background-image: none
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	flex-wrap: wrap
+	gap: 102px
+	.title-l
+		margin: 8px 0 16px
+	.banner-content
+		width: 451px	
+	.banner-img
+		width: 532px
+@media(max-width:568px)
+	.banner
+		margin-top: 32px
+		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg")
+		background-position: center bottom
+		background-size: 334px 244px
+		background-repeat: no-repeat
+		gap: 32px
+		.title-32
+			margin: 8px 0 16px
+		.banner-content
+			width: 100%
+		.banner-img
+			width: 100%
