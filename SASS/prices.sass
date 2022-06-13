@@ -142,6 +142,13 @@ $back-gray: #F7F9FD
 			line-height: 24px
 
 //myStyle
+.background-gray
+	position: relative
+	z-index: -1
+	background-color: $back-gray
+	width: 1366px
+	height: 470px
+	border-radius: 0px 0px 0px 300px	
 .main
 	max-width: 1366px
 	margin: 0 auto
@@ -149,8 +156,6 @@ $back-gray: #F7F9FD
 	background-position: top right
 	background-size: 885px 559px
 	background-repeat: no-repeat
-	background-color: $back-gray
-	border-radius: 0px 0px 0px 300px
 @media(max-width:568px)
 	.main
 		max-width: 375px
@@ -657,13 +662,12 @@ $back-gray: #F7F9FD
 			color: #fff
 			font-family: "Wendy One", sans-serif
 
-
 .prices-banner
 	height: 382px
 	padding-top: 92px
 	background-image: none
 	.title
-		margin-top: 16px	
+		margin-top: 16px
 @media(max-width:568px)
 	.prices-banner
 		height: 495px
@@ -676,3 +680,45 @@ $back-gray: #F7F9FD
 		border-radius: 0px 0px 0px 140px
 		.title
 			margin-top: 16px
+
+.choose
+	margin-top: 100px
+	text-align: center
+	.choose-button-wrap
+		margin-top: 48px
+		display: flex
+		justify-content: center
+		align-items: center
+		gap: 16px
+	.choose-button
+		width: 130px
+		height: 50px
+		border-radius: 27px
+		background-color: $blue
+		a
+			@include center
+			width: 130px
+			height: 50px
+			color: #fff
+			border-radius: 27px
+@media(max-width:568px)
+	.choose
+		margin-top: 100px
+		text-align: center
+		.choose-button-wrap
+			margin-top: 24px
+			display: flex
+			justify-content: center
+			align-items: center
+			gap: 6px
+		.choose-button
+			width: 90px
+			height: 40px
+			border-radius: 27px
+			background-color: $blue
+			a
+				@include center
+				width: 90px
+				height: 40px
+				color: #fff
+				border-radius: 27px

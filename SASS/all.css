@@ -68,7 +68,9 @@ table {
 }
 
 .card {
-  padding: 0 139px;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0px 140px;
 }
 
 @media (max-width: 568px) {
@@ -158,19 +160,26 @@ table {
     line-height: 24px;
   }
 }
-.main {
-  max-width: 1366px;
-  margin: 0 auto;
+.main::before {
+  width: 100%;
+  height: 3400px;
+  content: "";
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg");
-  background-position: top right, top 490px left -220px, top 1590px right -100px, center bottom 120px;
-  background-size: 850px 768px, 360px, 310px, 1366px;
+  background-position: top right, top 490px left -220px, top 1590px right -100px, center bottom;
+  background-size: 850px 768px, 360px, 310px, 100% 503px;
   background-repeat: no-repeat;
+  position: absolute;
+  z-index: -2;
 }
 
 @media (max-width: 568px) {
   .main {
     max-width: 375px;
     margin: 0 auto;
+    background-image: none;
+  }
+
+  .main::before {
     background-image: none;
   }
 }
@@ -270,6 +279,7 @@ table {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 126px;
 }
 .platform .platform-card-img > img {
@@ -346,10 +356,11 @@ table {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 16px;
 }
 .role .role-card-wrap .role-card {
-  width: 100%;
+  width: 259px;
   height: 388px;
   display: flex;
   flex-direction: column;
@@ -442,7 +453,7 @@ table {
   width: 507px;
   margin-top: 0px;
   display: grid;
-  grid-template-columns: 230px 230px;
+  grid-template-columns: repeat(auto-fill, 230px);
   grid-template-rows: 280px 280px;
   gap: 28px 47px;
 }
@@ -702,9 +713,8 @@ table {
   }
 }
 .footer {
-  margin-top: 360px;
-  padding-top: 0px;
-  padding-bottom: 100px;
+  margin-top: 100px;
+  padding: 260px 471px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -735,8 +745,7 @@ table {
 @media (max-width: 568px) {
   .footer {
     margin-top: 60px;
-    padding-top: 293px;
-    padding-bottom: 60px;
+    padding: 293px 0px 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -767,21 +776,13 @@ table {
     line-height: 26px;
   }
 }
-.credit-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.credit-wrap .credit {
-  width: 1366px;
+.credit {
   height: 56px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #F5F5F5;
-}
-.credit-wrap .credit p {
-  text-align: center;
 }
 
 @media (max-width: 568px) {

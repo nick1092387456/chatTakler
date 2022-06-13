@@ -159,6 +159,15 @@ table {
     line-height: 24px;
   }
 }
+.background-gray {
+  position: relative;
+  z-index: -1;
+  background-color: #F7F9FD;
+  width: 1366px;
+  height: 470px;
+  border-radius: 0px 0px 0px 300px;
+}
+
 .main {
   max-width: 1366px;
   margin: 0 auto;
@@ -166,8 +175,6 @@ table {
   background-position: top right;
   background-size: 885px 559px;
   background-repeat: no-repeat;
-  background-color: #F7F9FD;
-  border-radius: 0px 0px 0px 300px;
 }
 
 @media (max-width: 568px) {
@@ -870,5 +877,60 @@ table {
   }
   .prices-banner .title {
     margin-top: 16px;
+  }
+}
+.choose {
+  margin-top: 100px;
+  text-align: center;
+}
+.choose .choose-button-wrap {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.choose .choose-button {
+  width: 130px;
+  height: 50px;
+  border-radius: 27px;
+  background-color: #56C4C5;
+}
+.choose .choose-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 50px;
+  color: #fff;
+  border-radius: 27px;
+}
+
+@media (max-width: 568px) {
+  .choose {
+    margin-top: 100px;
+    text-align: center;
+  }
+  .choose .choose-button-wrap {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+  .choose .choose-button {
+    width: 90px;
+    height: 40px;
+    border-radius: 27px;
+    background-color: #56C4C5;
+  }
+  .choose .choose-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 40px;
+    color: #fff;
+    border-radius: 27px;
   }
 }/*# sourceMappingURL=prices.css.map */
