@@ -160,30 +160,7 @@ table {
     line-height: 24px;
   }
 }
-.main::before {
-  width: 100%;
-  min-height: 3400px;
-  content: "";
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg");
-  background-position: top right;
-  background-size: 850px 768px;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: -2;
-}
-
-@media (max-width: 568px) {
-  .main {
-    max-width: 375px;
-    margin: 0 auto;
-    background-image: none;
-  }
-
-  .main::before {
-    background-image: none;
-  }
-}
-.header {
+.header .card {
   width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -207,7 +184,7 @@ table {
 }
 
 @media (max-width: 568px) {
-  .header {
+  .header .card {
     width: 100%;
     padding: 16px 20px;
     border-bottom: 2px solid #FFD153;
@@ -224,6 +201,93 @@ table {
   }
   .header .logo img {
     height: 24px;
+  }
+}
+.credit {
+  height: 56px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5;
+}
+
+@media (max-width: 568px) {
+  .credit-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .credit-wrap .credit {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+  }
+  .credit-wrap .credit p {
+    text-align: center;
+  }
+}
+.top-button {
+  width: 71px;
+  height: 71px;
+  position: fixed;
+  right: 48px;
+  bottom: 23px;
+  background-color: #56C4C5;
+  border-radius: 50%;
+  z-index: 99;
+}
+.top-button a {
+  width: 71px;
+  height: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  font-family: "Wendy One", sans-serif;
+}
+
+@media (max-width: 568px) {
+  .top-button {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    background-color: #56C4C5;
+    border-radius: 50%;
+    z-index: 99;
+  }
+  .top-button a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-family: "Wendy One", sans-serif;
+  }
+}
+.header::before {
+  width: 100%;
+  min-height: 768px;
+  content: "";
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg");
+  background-position: top right;
+  background-size: 850px 768px;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -2;
+}
+
+@media (max-width: 568px) {
+  .header::before {
+    background-image: none;
   }
 }
 .banner {
@@ -811,73 +875,82 @@ table {
     line-height: 26px;
   }
 }
-.credit {
-  height: 56px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #F5F5F5;
+.prices-banner {
+  height: 382px;
+  padding-top: 92px;
+  background-image: none;
+}
+.prices-banner .title {
+  margin-top: 16px;
 }
 
 @media (max-width: 568px) {
-  .credit-wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .prices-banner {
+    height: 495px;
+    padding-top: 48px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/banner_sm.svg");
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.0784313725);
+    border-radius: 0px 0px 0px 140px;
   }
-  .credit-wrap .credit {
-    width: 100%;
-    height: 56px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F5F5F5;
+  .prices-banner .title {
+    margin-top: 16px;
   }
-  .credit-wrap .credit p {
+}
+.choose {
+  margin-top: 100px;
+  text-align: center;
+}
+.choose .choose-button-wrap {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.choose .choose-button {
+  width: 130px;
+  height: 50px;
+  border-radius: 27px;
+  background-color: #56C4C5;
+}
+.choose .choose-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 50px;
+  color: #fff;
+  border-radius: 27px;
+}
+
+@media (max-width: 568px) {
+  .choose {
+    margin-top: 100px;
     text-align: center;
   }
-}
-.top-button {
-  width: 71px;
-  height: 71px;
-  position: fixed;
-  right: 48px;
-  bottom: 23px;
-  background-color: #56C4C5;
-  border-radius: 50%;
-  z-index: 99;
-}
-.top-button a {
-  width: 71px;
-  height: 71px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: #fff;
-  font-family: "Wendy One", sans-serif;
-}
-
-@media (max-width: 568px) {
-  .top-button {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
-    background-color: #56C4C5;
-    border-radius: 50%;
-    z-index: 99;
-  }
-  .top-button a {
-    width: 50px;
-    height: 50px;
+  .choose .choose-button-wrap {
+    margin-top: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    gap: 6px;
+  }
+  .choose .choose-button {
+    width: 90px;
+    height: 40px;
+    border-radius: 27px;
+    background-color: #56C4C5;
+  }
+  .choose .choose-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 40px;
     color: #fff;
-    font-family: "Wendy One", sans-serif;
+    border-radius: 27px;
   }
 }/*# sourceMappingURL=all.css.map */

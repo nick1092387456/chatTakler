@@ -1,0 +1,62 @@
+//prices
+
+.prices-banner
+	height: 382px
+	padding-top: 92px
+	background-image: none
+	.title
+		margin-top: 16px
+@media(max-width:568px)
+	.prices-banner
+		height: 495px
+		padding-top: 48px
+		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/banner_sm.svg")
+		background-position: center top
+		background-size: contain
+		background-repeat: no-repeat
+		background-color: $back-gray
+		border-radius: 0px 0px 0px 140px
+		.title
+			margin-top: 16px
+
+.choose
+	margin-top: 100px
+	text-align: center
+	.choose-button-wrap
+		margin-top: 48px
+		display: flex
+		justify-content: center
+		align-items: center
+		gap: 16px
+	.choose-button
+		width: 130px
+		height: 50px
+		border-radius: 27px
+		background-color: $blue
+		a
+			@include center
+			width: 130px
+			height: 50px
+			color: #fff
+			border-radius: 27px
+@media(max-width:568px)
+	.choose
+		margin-top: 100px
+		text-align: center
+		.choose-button-wrap
+			margin-top: 24px
+			display: flex
+			justify-content: center
+			align-items: center
+			gap: 6px
+		.choose-button
+			width: 90px
+			height: 40px
+			border-radius: 27px
+			background-color: $blue
+			a
+				@include center
+				width: 90px
+				height: 40px
+				color: #fff
+				border-radius: 27px
