@@ -144,11 +144,11 @@ $light-gray: #F5F5F5
 //myStyle
 .main::before
 	width: 100%
-	height: 3400px
+	min-height: 3400px
 	content: ''
-	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg"),url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg")
-	background-position: top right, top 490px left -220px, top 1590px right -100px, center bottom
-	background-size: 850px 768px, 360px, 310px, 100% 503px
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg")
+	background-position: top right
+	background-size: 850px 768px
 	background-repeat: no-repeat
 	position: absolute
 	z-index: -2
@@ -193,14 +193,18 @@ $light-gray: #F5F5F5
 				height: 24px
 
 .banner
-	margin-top: 32px
-	background-image: none
-	display: flex
-	flex-direction: row
-	justify-content: space-between
-	align-items: center
-	flex-wrap: wrap
-	gap: 102px
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg")
+	background-position: bottom -296px left -200px
+	background-size: 360px
+	background-repeat: no-repeat
+	.card
+		margin-top: 32px
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		gap: 102px
 	.title-l
 		margin: 8px 0 16px
 	.banner-content
@@ -209,12 +213,13 @@ $light-gray: #F5F5F5
 		width: 532px
 @media(max-width:568px)
 	.banner
-		margin-top: 32px
 		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg")
 		background-position: center bottom
 		background-size: 334px 244px
 		background-repeat: no-repeat
-		gap: 32px
+		.card
+			margin-top: 32px
+			gap: 32px
 		.title-32
 			margin: 8px 0 16px
 		.banner-content
@@ -223,10 +228,14 @@ $light-gray: #F5F5F5
 			width: 100%
 
 .platform
-	@include center
-	margin-top: 101px
-	flex-direction: column
-	background-image: none
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg")
+	background-position: top -64px left -200px
+	background-size: 360px
+	background-repeat: no-repeat
+	.card
+		padding-top: 217px
+		@include center
+		flex-direction: column
 	.platform-card-wrap
 		margin-top: 48px
 		@include center
@@ -244,12 +253,13 @@ $light-gray: #F5F5F5
 		color: $deep-gray
 @media(max-width:568px)
 	.platform
-		@include center
-		margin-top: 98.5px
 		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball01.svg")
 		background-position: top 15px left -77px
 		background-size: 126px
 		background-repeat: no-repeat
+		.card
+			@include center
+			padding-top: 98.5px
 		.platform-card-wrap
 			margin-top: 32px
 			@include center
@@ -266,11 +276,14 @@ $light-gray: #F5F5F5
 			color: $deep-gray
 
 .role
-	@include center
-	flex-direction: column
-	margin-top: 100px
-	text-align: center
-	background-image: none
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg")
+	background-position: bottom -200px right -100px
+	background-repeat: no-repeat
+	.card
+		@include center
+		flex-direction: column
+		padding-top: 100px
+		text-align: center
 	.title-s
 		margin-top: 16px
 		p
@@ -299,14 +312,15 @@ $light-gray: #F5F5F5
 				padding: 0px 16px 24px
 @media(max-width:568px)
 	.role
-		@include center
-		flex-direction: column
-		margin-top: 60px
-		text-align: center
 		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg")
 		background-position: right -50px bottom
 		background-size: 135px
 		background-repeat: no-repeat
+		.card
+			@include center
+			flex-direction: column
+			padding-top: 60px
+			text-align: center
 		.title-s
 			margin-top: 16px
 			p
@@ -329,12 +343,16 @@ $light-gray: #F5F5F5
 				overflow: hidden
 
 .build
-	width: 100%
-	margin-top: 100px
-	@include center
-	justify-content: left
-	flex-direction: row-reverse
-	gap: 137px
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg")
+	background-position: top -110px right -100px
+	background-repeat: no-repeat
+	.card
+		width: 100%
+		padding-top: 100px
+		@include center
+		justify-content: left
+		flex-direction: row-reverse
+		gap: 137px
 	.build-info
 		width: 396px
 		display: flex
@@ -387,11 +405,13 @@ $light-gray: #F5F5F5
 				margin-top: 16px
 @media(max-width:568px)
 	.build
-		width: 100%
-		margin-top: 28px
-		@include center
-		flex-direction: column
-		gap: 32px
+		background-image: none
+		.card
+			width: 100%
+			padding-top: 28px
+			@include center
+			flex-direction: column
+			gap: 32px
 		.build-info
 			width: 100%
 			@include center
@@ -561,12 +581,16 @@ $light-gray: #F5F5F5
 				border-radius: 8px
 
 .footer
-	margin-top: 100px
-	padding: 260px 471px 100px
-	@include center
-	flex-direction: column
-	gap: 48px
-	background-image: none
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg")
+	background-position: center top
+	background-size: 100%
+	background-repeat: no-repeat
+	.card
+		margin-top: 100px
+		padding: 260px 471px 100px
+		@include center
+		flex-direction: column
+		gap: 48px
 	.title>p
 		font-size: 32px
 		line-height: 46px
@@ -583,15 +607,16 @@ $light-gray: #F5F5F5
 			line-height: 26px
 @media(max-width:568px)
 	.footer
-		margin-top: 60px
-		padding: 293px 0px 60px
-		@include center
-		flex-direction: column
-		gap: 24px
 		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/footer_sm.svg")
 		background-position: center top
 		background-size: contain
 		background-repeat: no-repeat
+		.card
+			margin-top: 60px
+			padding: 293px 0px 60px
+			@include center
+			flex-direction: column
+			gap: 24px
 		.title>p
 			font-size: 24px
 			line-height: 35px
