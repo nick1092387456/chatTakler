@@ -1,0 +1,278 @@
+@import "base"
+
+//prices
+.header
+	&::before
+		content: ''
+		position: absolute
+		width: 885px
+		height: 546px
+		background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/banner.svg)
+		background-repeat: no-repeat
+		right: 0px
+		z-index: -1
+	&::after
+		width: 100%
+		height: 470px
+		content: ""
+		background-color: $back-gray
+		border-radius: 0px 0px 0px 300px
+		position: absolute
+		top: 0px
+		right: 0px
+		z-index: -2
+@media(max-width:568px)
+	.header
+		&::before,&::after
+			background-image: none
+			background-color: inherit
+
+.prices-banner
+	height: 382px
+	padding-top: 92px
+	background-image: none
+	.title
+		margin-top: 16px
+@media(max-width:568px)
+	.prices-banner
+		height: 495px
+		padding-top: 48px
+		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/banner_sm.svg")
+		background-position: right top
+		background-size: contain
+		background-repeat: no-repeat
+		background-color: $back-gray
+		border-radius: 0px 0px 0px 140px
+		.title
+			margin-top: 16px
+
+.choose
+	.card
+		padding-top: 100px
+		text-align: center
+	.choose-button-wrap
+		margin-top: 48px
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		gap: 16px
+	.choose-button
+		width: 130px
+		height: 50px
+		border-radius: 27px
+		background-color: $blue
+		a
+			@include center
+			width: 130px
+			height: 50px
+			color: #fff
+			border-radius: 27px
+@media(max-width:568px)
+	.choose
+		.card
+			padding-top: 60px
+			text-align: center
+		.choose-button-wrap
+			margin-top: 24px
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center
+			gap: 6px
+		.choose-button
+			width: 90px
+			height: 40px
+			border-radius: 27px
+			background-color: $blue
+			a
+				@include center
+				width: 90px
+				height: 40px
+				color: #fff
+				border-radius: 27px
+
+.plan
+	background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball03.svg")
+	background-repeat: no-repeat
+	background-position: -267px 145px
+	background-size: 361px
+	.card
+		padding-top: 48px
+	.plan-card-wrap
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+		gap: 21px
+	.plan-card
+		padding-bottom: 32px
+		background-color: #fff
+		border-radius: 12px
+		box-shadow: 0px 2px 10px #00000014
+		.title>p
+			font-weight: bold
+			font-size: 24px
+			line-height: 35px
+			padding: 16px
+			@include center
+			border-bottom: 1px solid #DDDDDD
+		.plan-card-content>p
+			padding: 24px 20px 0px
+			text-align: center
+		.description-card-wrap
+			padding: 24px 29px 0px
+			@include center
+			flex-direction: row
+			gap: 21px
+			.description-card
+				@include center
+				flex-direction: column
+				width: 169px
+				height: 108px
+				padding: 16px 24px
+				background-color: $light-gray
+				border-radius: 12px
+			.title>p
+				padding: 0px
+				font-size: 12px
+				line-height: 17px
+				font-weight: normal
+				border-bottom: none
+			.content
+				@include center
+				align-items: end
+				gap: 4px
+				font-size: 12px
+				line-height: 17px
+				color: $blue
+			.content>p
+				font-size: 28px
+				line-height: 32px
+			.watershed>p
+				font-size: 29px
+				line-height: 42px
+		.plan-card-list
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			padding: 27px 20px 0px
+			ul
+				display: flex
+				flex-direction: column
+				gap: 16px
+			li>p
+				display: inline
+				padding-left: 27px
+				font-size: 14px
+				line-height: 20px
+			li:before
+				content: ''
+				background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_check.svg")
+				background-size: contain
+				background-repeat: no-repeat
+				position: absolute
+				width: 16px
+				height: 14px
+				padding-bottom: 1px
+			.button
+				margin-top: 35px
+				width: 136px
+				height: 49px
+				border-radius: 27px
+				&>a
+					width: 136px
+					height: 49px
+					border-radius: 27px
+@media(max-width:568px)
+	.plan
+		background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball03.svg")
+		background-repeat: no-repeat
+		background-position: -108px 486px
+		background-size: 204px
+		.card
+			padding-top: 32px
+		.plan-card-wrap
+			display: flex
+			flex-direction: column
+			gap: 24px
+		.plan-card
+			padding-bottom: 24px
+			background-color: #fff
+			border-radius: 12px
+			box-shadow: 0px 2px 10px #00000014
+			.title>p
+				font-weight: bold
+				font-size: 24px
+				line-height: 35px
+				padding: 16px
+				@include center
+				border-bottom: 1px solid #DDDDDD
+			.plan-card-content>p
+				padding: 24px 20px 0px
+				text-align: center
+			.description-card-wrap
+				padding: 24px 20px 0px
+				@include center
+				flex-direction: row
+				gap: 6px
+				.description-card
+					width: 139px
+					height: 89px
+					padding: 16px 24px
+					background-color: $light-gray
+					border-radius: 12px
+				.title>p
+					word-break: keep-all
+					padding: 0px
+					font-size: 12px
+					line-height: 17px
+					font-weight: normal
+					border-bottom: none
+				.content
+					@include center
+					align-items: end
+					gap: 4px
+					font-size: 12px
+					line-height: 17px
+					color: $blue
+				.content>p
+					font-size: 28px
+					line-height: 32px
+				.watershed>p
+					font-size: 24px
+					line-height: 35px
+			.plan-card-list
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				padding: 27px 20px 0px
+				ul
+					display: flex
+					flex-direction: column
+					gap: 16px
+				li>p
+					display: inline
+					padding-left: 27px
+					font-size: 14px
+					line-height: 20px
+				li:before
+					content: ''
+					background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_check.svg")
+					background-size: contain
+					background-repeat: no-repeat
+					position: absolute
+					width: 16px
+					height: 14px
+					padding-bottom: 1px
+				.button
+					margin-top: 35px
+					width: 136px
+					height: 49px
+					border-radius: 27px
+					&>a
+						width: 136px
+						height: 49px
+						border-radius: 27px

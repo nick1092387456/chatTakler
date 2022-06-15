@@ -80,6 +80,8 @@ table {
 }
 .button {
   border-radius: 22px;
+  width: 128px;
+  height: 40px;
 }
 .button a {
   width: 128px;
@@ -500,7 +502,7 @@ table {
 }
 .build {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg");
-  background-position: top -110px right -100px;
+  background-position: top -117px right -100px;
   background-repeat: no-repeat;
 }
 .build .card {
@@ -874,83 +876,4 @@ table {
     font-size: 18px;
     line-height: 26px;
   }
-}
-.prices-banner {
-  height: 382px;
-  padding-top: 92px;
-  background-image: none;
-}
-.prices-banner .title {
-  margin-top: 16px;
-}
-
-@media (max-width: 568px) {
-  .prices-banner {
-    height: 495px;
-    padding-top: 48px;
-    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/banner_sm.svg");
-    background-position: center top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.0784313725);
-    border-radius: 0px 0px 0px 140px;
-  }
-  .prices-banner .title {
-    margin-top: 16px;
-  }
-}
-.choose {
-  margin-top: 100px;
-  text-align: center;
-}
-.choose .choose-button-wrap {
-  margin-top: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-.choose .choose-button {
-  width: 130px;
-  height: 50px;
-  border-radius: 27px;
-  background-color: #56C4C5;
-}
-.choose .choose-button a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 130px;
-  height: 50px;
-  color: #fff;
-  border-radius: 27px;
-}
-
-@media (max-width: 568px) {
-  .choose {
-    margin-top: 100px;
-    text-align: center;
-  }
-  .choose .choose-button-wrap {
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-  }
-  .choose .choose-button {
-    width: 90px;
-    height: 40px;
-    border-radius: 27px;
-    background-color: #56C4C5;
-  }
-  .choose .choose-button a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90px;
-    height: 40px;
-    color: #fff;
-    border-radius: 27px;
-  }
-}/*# sourceMappingURL=all.css.map */
+}/*# sourceMappingURL=index.css.map */
