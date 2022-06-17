@@ -276,3 +276,118 @@
 						width: 136px
 						height: 49px
 						border-radius: 27px
+
+.problem
+	.card
+		padding: 100px 0px 0px
+		max-width: 930px
+		@include center
+		flex-direction: column
+	.collapsibles-wrap
+		padding-top: 48px
+		display: flex
+		flex-direction: column
+		gap: 16px
+		width: 100%
+	.toggle-container
+		height: 100%
+		box-shadow: 0px 2px 10px #00000014
+		border-radius: 12px
+	.collapsible
+		border-radius: 12px
+		padding: 16px
+		background-color: #fff
+		color: #221E1F
+		cursor: pointer
+		@include center
+		justify-content: space-between
+		p
+			display: inline
+	.collapse-content
+		padding: 0 16px
+		max-height: 0
+		overflow: hidden
+		opacity: 0
+		transition: padding-bottom 1s, max-height 1s, opacity 1s 0.5s
+		p
+			line-height: 32px
+			color: $deep-gray
+	.nav-toggle
+		position: absolute
+		visibility: hidden
+	.nav-toggle:checked ~ .nav-toggle-label > .collapsible, .collapsible:hover
+		color: $blue
+	.nav-toggle:checked ~ .collapse-content
+		max-height: 500px
+		padding-bottom: 24px
+		opacity: 1
+	.nav-toggle:checked ~ .nav-toggle-label > .collapsible::after
+		content: "\2212"
+	.collapsible::after
+		content: '\002B'
+		font-weight: bold
+		font-size: 24px
+		line-height: 16px
+		color: $blue
+	.nav-toggle:checked ~ .nav-toggle-label > .collapsible::after
+		content: "\2212"
+@media(max-width:568px)
+	.problem
+		.card
+			padding: 60px 20px 0px
+			@include center
+			flex-direction: column
+		.collapsibles-wrap
+			padding-top: 32px
+			display: flex
+			flex-direction: column
+			gap: 16px
+			width: 100%
+		.toggle-container
+			height: 100%
+			box-shadow: 0px 2px 10px #00000014
+			border-radius: 12px
+		.collapsible
+			border-radius: 12px
+			padding: 16px
+			background-color: #fff
+			color: #221E1F
+			cursor: pointer
+			@include center
+			justify-content: space-between
+			p
+				display: inline
+		.collapse-content
+			padding: 0 16px
+			max-height: 0
+			overflow: hidden
+			opacity: 0
+			transition: padding-bottom 1s, max-height 1s, opacity 1s 0.5s
+			p
+				line-height: 32px
+				color: $deep-gray
+		.nav-toggle
+			position: absolute
+			visibility: hidden
+		.nav-toggle:checked ~ .nav-toggle-label > .collapsible, .collapsible:hover
+			color: $blue
+		.nav-toggle:checked ~ .collapse-content
+			max-height: 500px
+			padding-bottom: 24px
+			opacity: 1
+		.nav-toggle:checked ~ .nav-toggle-label > .collapsible::after
+			content: "\2212"
+		.collapsible::after
+			content: '\002B'
+			font-weight: bold
+			font-size: 24px
+			line-height: 16px
+			color: $blue
+		.nav-toggle:checked ~ .nav-toggle-label > .collapsible::after
+			content: "\2212"
+
+.credit
+	margin-top: 100px
+@media(max-width:568px)
+	.credit
+		margin-top: 60px

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -618,5 +619,156 @@ table {
     width: 136px;
     height: 49px;
     border-radius: 27px;
+  }
+}
+.problem .card {
+  padding: 100px 0px 0px;
+  max-width: 930px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.problem .collapsibles-wrap {
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.problem .toggle-container {
+  height: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  border-radius: 12px;
+}
+.problem .collapsible {
+  border-radius: 12px;
+  padding: 16px;
+  background-color: #fff;
+  color: #221E1F;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.problem .collapsible p {
+  display: inline;
+}
+.problem .collapse-content {
+  padding: 0 16px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: padding-bottom 1s, max-height 1s, opacity 1s 0.5s;
+}
+.problem .collapse-content p {
+  line-height: 32px;
+  color: #747474;
+}
+.problem .nav-toggle {
+  position: absolute;
+  visibility: hidden;
+}
+.problem .nav-toggle:checked ~ .nav-toggle-label > .collapsible, .problem .collapsible:hover {
+  color: #56C4C5;
+}
+.problem .nav-toggle:checked ~ .collapse-content {
+  max-height: 500px;
+  padding-bottom: 24px;
+  opacity: 1;
+}
+.problem .nav-toggle:checked ~ .nav-toggle-label > .collapsible::after {
+  content: "−";
+}
+.problem .collapsible::after {
+  content: "+";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 16px;
+  color: #56C4C5;
+}
+.problem .nav-toggle:checked ~ .nav-toggle-label > .collapsible::after {
+  content: "−";
+}
+
+@media (max-width: 568px) {
+  .problem .card {
+    padding: 60px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .problem .collapsibles-wrap {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  .problem .toggle-container {
+    height: 100%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+    border-radius: 12px;
+  }
+  .problem .collapsible {
+    border-radius: 12px;
+    padding: 16px;
+    background-color: #fff;
+    color: #221E1F;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .problem .collapsible p {
+    display: inline;
+  }
+  .problem .collapse-content {
+    padding: 0 16px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: padding-bottom 1s, max-height 1s, opacity 1s 0.5s;
+  }
+  .problem .collapse-content p {
+    line-height: 32px;
+    color: #747474;
+  }
+  .problem .nav-toggle {
+    position: absolute;
+    visibility: hidden;
+  }
+  .problem .nav-toggle:checked ~ .nav-toggle-label > .collapsible, .problem .collapsible:hover {
+    color: #56C4C5;
+  }
+  .problem .nav-toggle:checked ~ .collapse-content {
+    max-height: 500px;
+    padding-bottom: 24px;
+    opacity: 1;
+  }
+  .problem .nav-toggle:checked ~ .nav-toggle-label > .collapsible::after {
+    content: "−";
+  }
+  .problem .collapsible::after {
+    content: "+";
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 16px;
+    color: #56C4C5;
+  }
+  .problem .nav-toggle:checked ~ .nav-toggle-label > .collapsible::after {
+    content: "−";
+  }
+}
+.credit {
+  margin-top: 100px;
+}
+
+@media (max-width: 568px) {
+  .credit {
+    margin-top: 60px;
   }
 }/*# sourceMappingURL=prices.css.map */
