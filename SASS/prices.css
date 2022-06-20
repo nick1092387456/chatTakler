@@ -74,7 +74,6 @@ html {
 
 :root {
   overflow-y: auto;
-  overflow-x: hidden;
 }
 
 :root body {
@@ -82,8 +81,7 @@ html {
 }
 
 body {
-  width: 100vw;
-  overflow: hidden;
+  width: 100%;
 }
 
 .card {
