@@ -67,6 +67,24 @@ table {
   border-spacing: 0;
 }
 
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
 .card {
   max-width: 1366px;
   margin: 0 auto;

@@ -65,6 +65,21 @@ $blue: #56C4C5
 $deep-gray: #747474
 $light-gray: #F5F5F5
 $back-gray: #00000014
+
+html
+	overflow-y: scroll
+
+:root
+	overflow-y: auto
+	overflow-x: hidden
+
+:root body
+	position: absolute
+
+body
+	width: 100vw
+	overflow: hidden
+
 @mixin center
 	display: flex
 	justify-content: center
@@ -226,4 +241,4 @@ $back-gray: #00000014
 			@include center
 			border-radius: 50%
 			color: #fff
-			font-family: "Wendy One", sans-serif	
+			font-family: "Wendy One", sans-serif
